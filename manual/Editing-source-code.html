@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+<title>Editing source code - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Working-With-Source-Code.html#Working-With-Source-Code" title="Working With Source Code">
+<link rel="prev" href="Structure-of-code-blocks.html#Structure-of-code-blocks" title="Structure of code blocks">
+<link rel="next" href="Exporting-code-blocks.html#Exporting-code-blocks" title="Exporting code blocks">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 8.0.6 (release_8.0.6).
+
+Copyright (C) 2004--2013 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="http://orgmode.org/org-manual.css" type="text/css" />
+<script type="text/javascript" src="http://orgmode.org/org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="toc_Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="toc_Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="toc_Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="toc_Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="toc_Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="toc_TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="toc_Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="toc_Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="toc_Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="toc_Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="toc_Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="toc_Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="toc_Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="toc_Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="toc_Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="toc_Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="toc_Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="toc_MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="toc_History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="toc_Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="toc_Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="toc_Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Editing-source-code"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Exporting-code-blocks.html#Exporting-code-blocks">Exporting code blocks</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Structure-of-code-blocks.html#Structure-of-code-blocks">Structure of code blocks</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Working-With-Source-Code.html#Working-With-Source-Code">Working With Source Code</a>
+<hr>
+</div>
+
+<h3 class="section">14.2 Editing source code</h3>
+
+<p><a name="index-code-block_002c-editing-1890"></a><a name="index-source-code_002c-editing-1891"></a>
+<a name="index-org_002dedit_002dsrc_002dauto_002dsave_002didle_002ddelay-1892"></a><a name="index-org_002dedit_002dsrc_002dturn_002don_002dauto_002dsave-1893"></a><a name="index-C_002dc-_0027-1894"></a>Use <kbd>C-c '</kbd> to edit the current code block.  This brings up a language
+major-mode edit buffer containing the body of the code block.  Manually
+saving this buffer with &lt;C-x C-s&gt; will write the contents back to the Org
+buffer.  You can also set <code>org-edit-src-auto-save-idle-delay</code> to save the
+base buffer after some idle delay, or <code>org-edit-src-turn-on-auto-save</code>
+to auto-save this buffer into a separate file using <code>auto-save-mode</code>. 
+Use <kbd>C-c '</kbd> again to exit.
+
+   <p>The <code>org-src-mode</code> minor mode will be active in the edit buffer.  The
+following variables can be used to configure the behavior of the edit
+buffer.  See also the customization group <code>org-edit-structure</code> for
+further configuration options.
+
+     <dl>
+<dt><code>org-src-lang-modes</code><dd>If an Emacs major-mode named <code>&lt;lang&gt;-mode</code> exists, where
+<code>&lt;lang&gt;</code> is the language named in the header line of the code block,
+then the edit buffer will be placed in that major-mode.  This variable
+can be used to map arbitrary language names to existing major modes. 
+<br><dt><code>org-src-window-setup</code><dd>Controls the way Emacs windows are rearranged when the edit buffer is created. 
+<br><dt><code>org-src-preserve-indentation</code><dd>This variable is especially useful for tangling languages such as
+Python, in which whitespace indentation in the output is critical. 
+<br><dt><code>org-src-ask-before-returning-to-edit-buffer</code><dd>By default, Org will ask before returning to an open edit buffer.  Set this
+variable to <code>nil</code> to switch without asking. 
+</dl>
+
+   <p>To turn on native code fontification in the <em>Org</em> buffer, configure the
+variable <code>org-src-fontify-natively</code>.
+
+<!-- node-name,  next,  previous,  up -->
+<!-- Exporting code blocks, Extracting source code, Editing source code, Working With Source Code -->
+   </body></html>
+

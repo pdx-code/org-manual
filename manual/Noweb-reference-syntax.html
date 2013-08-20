@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+<title>Noweb reference syntax - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Working-With-Source-Code.html#Working-With-Source-Code" title="Working With Source Code">
+<link rel="prev" href="Results-of-evaluation.html#Results-of-evaluation" title="Results of evaluation">
+<link rel="next" href="Key-bindings-and-useful-functions.html#Key-bindings-and-useful-functions" title="Key bindings and useful functions">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 8.0.6 (release_8.0.6).
+
+Copyright (C) 2004--2013 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="http://orgmode.org/org-manual.css" type="text/css" />
+<script type="text/javascript" src="http://orgmode.org/org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="toc_Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="toc_Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="toc_Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="toc_Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="toc_Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="toc_TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="toc_Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="toc_Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="toc_Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="toc_Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="toc_Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="toc_Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="toc_Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="toc_Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="toc_Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="toc_Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="toc_Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="toc_MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="toc_History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="toc_Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="toc_Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="toc_Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Noweb-reference-syntax"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Key-bindings-and-useful-functions.html#Key-bindings-and-useful-functions">Key bindings and useful functions</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Results-of-evaluation.html#Results-of-evaluation">Results of evaluation</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Working-With-Source-Code.html#Working-With-Source-Code">Working With Source Code</a>
+<hr>
+</div>
+
+<h3 class="section">14.10 Noweb reference syntax</h3>
+
+<p><a name="index-code-block_002c-noweb-reference-1923"></a><a name="index-syntax_002c-noweb-1924"></a><a name="index-source-code_002c-noweb-reference-1925"></a>
+The &ldquo;noweb&rdquo; (see <a href="http://www.cs.tufts.edu/~nr/noweb/">http://www.cs.tufts.edu/~nr/noweb/</a>) Literate
+Programming system allows named blocks of code to be referenced by using the
+familiar Noweb syntax:
+
+<pre class="example">     &lt;&lt;code-block-name&gt;&gt;
+</pre>
+   <p>When a code block is tangled or evaluated, whether or not &ldquo;noweb&rdquo;
+references are expanded depends upon the value of the <code>:noweb</code> header
+argument.  If <code>:noweb yes</code>, then a Noweb reference is expanded before
+evaluation.  If <code>:noweb no</code>, the default, then the reference is not
+expanded before evaluation.  See the <a href="noweb_002dref.html#noweb_002dref">noweb-ref</a> header argument for
+a more flexible way to resolve noweb references.
+
+   <p>It is possible to include the <em>results</em> of a code block rather than the
+body.  This is done by appending parenthesis to the code block name which may
+optionally contain arguments to the code block as shown below.
+
+<pre class="example">     &lt;&lt;code-block-name(optional arguments)&gt;&gt;
+</pre>
+   <p>Note: the default value, <code>:noweb no</code>, was chosen to ensure that
+correct code is not broken in a language, such as Ruby, where
+<code>&lt;&lt;arg&gt;&gt;</code> is a syntactically valid construct.  If <code>&lt;&lt;arg&gt;&gt;</code> is not
+syntactically valid in languages that you use, then please consider setting
+the default value.
+
+   <p>Note: if noweb tangling is slow in large Org mode files consider setting the
+<code>org-babel-use-quick-and-dirty-noweb-expansion</code> variable to <code>t</code>. 
+This will result in faster noweb reference resolution at the expense of not
+correctly resolving inherited values of the <code>:noweb-ref</code> header
+argument.
+
+   </body></html>
+

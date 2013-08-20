@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+<title>Publishing options - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Configuration.html#Configuration" title="Configuration">
+<link rel="prev" href="Publishing-action.html#Publishing-action" title="Publishing action">
+<link rel="next" href="Publishing-links.html#Publishing-links" title="Publishing links">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 8.0.6 (release_8.0.6).
+
+Copyright (C) 2004--2013 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="http://orgmode.org/org-manual.css" type="text/css" />
+<script type="text/javascript" src="http://orgmode.org/org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="toc_Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="toc_Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="toc_Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="toc_Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="toc_Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="toc_TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="toc_Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="toc_Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="toc_Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="toc_Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="toc_Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="toc_Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="toc_Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="toc_Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="toc_Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="toc_Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="toc_Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="toc_MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="toc_History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="toc_Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="toc_Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="toc_Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Publishing-options"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Publishing-links.html#Publishing-links">Publishing links</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Publishing-action.html#Publishing-action">Publishing action</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Configuration.html#Configuration">Configuration</a>
+<hr>
+</div>
+
+<h4 class="subsection">13.1.5 Options for the exporters</h4>
+
+<p><a name="index-options_002c-for-publishing-1821"></a>
+The property list can be used to set many export options for the exporters. 
+In most cases, these properties correspond to user variables in Org.  The
+first table below lists these properties along with the variable they belong
+to.  The second table list HTML specific properties.  See the documentation
+string of these options for details.
+
+   <p><a name="index-org_002ddisplay_002dcustom_002dtimes-1822"></a><a name="index-org_002dexport_002ddefault_002dlanguage-1823"></a><a name="index-org_002dexport_002dexclude_002dtags-1824"></a><a name="index-org_002dexport_002dheadline_002dlevels-1825"></a><a name="index-org_002dexport_002dpreserve_002dbreaks-1826"></a><a name="index-org_002dexport_002dpublishing_002ddirectory-1827"></a><a name="index-org_002dexport_002dselect_002dtags-1828"></a><a name="index-org_002dexport_002dwith_002darchived_002dtrees-1829"></a><a name="index-org_002dexport_002dwith_002dauthor-1830"></a><a name="index-org_002dexport_002dwith_002dcreator-1831"></a><a name="index-org_002dexport_002dwith_002ddrawers-1832"></a><a name="index-org_002dexport_002dwith_002demail-1833"></a><a name="index-org_002dexport_002dwith_002demphasize-1834"></a><a name="index-org_002dexport_002dwith_002dfixed_002dwidth-1835"></a><a name="index-org_002dexport_002dwith_002dfootnotes-1836"></a><a name="index-org_002dexport_002dwith_002dlatex-1837"></a><a name="index-org_002dexport_002dwith_002dplanning-1838"></a><a name="index-org_002dexport_002dwith_002dpriority-1839"></a><a name="index-org_002dexport_002dwith_002dsection_002dnumbers-1840"></a><a name="index-org_002dexport_002dwith_002dspecial_002dstrings-1841"></a><a name="index-org_002dexport_002dwith_002dsub_002dsuperscripts-1842"></a><a name="index-org_002dexport_002dwith_002dtables-1843"></a><a name="index-org_002dexport_002dwith_002dtags-1844"></a><a name="index-org_002dexport_002dwith_002dtasks-1845"></a><a name="index-org_002dexport_002dwith_002dtimestamps-1846"></a><a name="index-org_002dexport_002dwith_002dtoc-1847"></a><a name="index-org_002dexport_002dwith_002dtodo_002dkeywords-1848"></a><a name="index-user_002dmail_002daddress-1849"></a>
+   <p><table summary=""><tr align="left"><td valign="top" width="32%"><code>:archived-trees</code>        </td><td valign="top" width="68%"><code>org-export-with-archived-trees</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:exclude-tags</code>          </td><td valign="top" width="68%"><code>org-export-exclude-tags</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:headline-levels</code>       </td><td valign="top" width="68%"><code>org-export-headline-levels</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:language</code>              </td><td valign="top" width="68%"><code>org-export-default-language</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:preserve-breaks</code>       </td><td valign="top" width="68%"><code>org-export-preserve-breaks</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:publishing-directory</code>  </td><td valign="top" width="68%"><code>org-export-publishing-directory</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:section-numbers</code>       </td><td valign="top" width="68%"><code>org-export-with-section-numbers</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:select-tags</code>           </td><td valign="top" width="68%"><code>org-export-select-tags</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-author</code>           </td><td valign="top" width="68%"><code>org-export-with-author</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-creator</code>          </td><td valign="top" width="68%"><code>org-export-with-creator</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-drawers</code>          </td><td valign="top" width="68%"><code>org-export-with-drawers</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-email</code>            </td><td valign="top" width="68%"><code>org-export-with-email</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-emphasize</code>        </td><td valign="top" width="68%"><code>org-export-with-emphasize</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-fixed-width</code>      </td><td valign="top" width="68%"><code>org-export-with-fixed-width</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-footnotes</code>        </td><td valign="top" width="68%"><code>org-export-with-footnotes</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-latex</code>            </td><td valign="top" width="68%"><code>org-export-with-latex</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-planning</code>         </td><td valign="top" width="68%"><code>org-export-with-planning</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-priority</code>         </td><td valign="top" width="68%"><code>org-export-with-priority</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-special-strings</code>  </td><td valign="top" width="68%"><code>org-export-with-special-strings</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-sub-superscript</code>  </td><td valign="top" width="68%"><code>org-export-with-sub-superscripts</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-tables</code>           </td><td valign="top" width="68%"><code>org-export-with-tables</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-tags</code>             </td><td valign="top" width="68%"><code>org-export-with-tags</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-tasks</code>            </td><td valign="top" width="68%"><code>org-export-with-tasks</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-timestamps</code>       </td><td valign="top" width="68%"><code>org-export-with-timestamps</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-toc</code>              </td><td valign="top" width="68%"><code>org-export-with-toc</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:with-todo-keywords</code>    </td><td valign="top" width="68%"><code>org-export-with-todo-keywords</code>
+   <br></td></tr></table>
+
+   <p><a name="index-org_002dhtml_002ddoctype-1850"></a><a name="index-org_002dhtml_002dxml_002ddeclaration-1851"></a><a name="index-org_002dhtml_002dlink_002dup-1852"></a><a name="index-org_002dhtml_002dlink_002dhome-1853"></a><a name="index-org_002dhtml_002dlink_002dorg_002dfiles_002das_002dhtml-1854"></a><a name="index-org_002dhtml_002dhead-1855"></a><a name="index-org_002dhtml_002dhead_002dextra-1856"></a><a name="index-org_002dhtml_002dinline_002dimages-1857"></a><a name="index-org_002dhtml_002dextension-1858"></a><a name="index-org_002dhtml_002dpreamble-1859"></a><a name="index-org_002dhtml_002dpostamble-1860"></a><a name="index-org_002dhtml_002dtable_002ddefault_002dattributes-1861"></a><a name="index-org_002dhtml_002dhead_002dinclude_002ddefault_002dstyle-1862"></a><a name="index-org_002dhtml_002dhead_002dinclude_002dscripts-1863"></a>
+   <p><table summary=""><tr align="left"><td valign="top" width="32%"><code>:html-doctype</code>          </td><td valign="top" width="68%"><code>org-html-doctype</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-xml-declaration</code>  </td><td valign="top" width="68%"><code>org-html-xml-declaration</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-link-up</code>          </td><td valign="top" width="68%"><code>org-html-link-up</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-link-home</code>        </td><td valign="top" width="68%"><code>org-html-link-home</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-link-org-as-html</code> </td><td valign="top" width="68%"><code>org-html-link-org-files-as-html</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-head</code>             </td><td valign="top" width="68%"><code>org-html-head</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-head-extra</code>       </td><td valign="top" width="68%"><code>org-html-head-extra</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-inline-images</code>    </td><td valign="top" width="68%"><code>org-html-inline-images</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-extension</code>        </td><td valign="top" width="68%"><code>org-html-extension</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-preamble</code>         </td><td valign="top" width="68%"><code>org-html-preamble</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-postamble</code>        </td><td valign="top" width="68%"><code>org-html-postamble</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-table-attributes</code>        </td><td valign="top" width="68%"><code>org-html-table-default-attributes</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-head-include-default-style</code> </td><td valign="top" width="68%"><code>org-html-head-include-default-style</code>
+<br></td></tr><tr align="left"><td valign="top" width="32%"><code>:html-head-include-scripts</code> </td><td valign="top" width="68%"><code>org-html-head-include-scripts</code>
+   <br></td></tr></table>
+
+   <p>Most of the <code>org-export-with-*</code> variables have the same effect in each
+exporter.
+
+   <p><a name="index-org_002dpublish_002dproject_002dalist-1864"></a>When a property is given a value in <code>org-publish-project-alist</code>, its
+setting overrides the value of the corresponding user variable (if any)
+during publishing.  Options set within a file (see <a href="Export-settings.html#Export-settings">Export settings</a>),
+however, override everything.
+
+   </body></html>
+

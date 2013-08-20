@@ -1,0 +1,143 @@
+<html lang="en">
+<head>
+<title>Structure of code blocks - The Org Manual</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name="description" content="The Org Manual">
+<meta name="generator" content="makeinfo 4.13">
+<link title="Top" rel="start" href="index.html#Top">
+<link rel="up" href="Working-With-Source-Code.html#Working-With-Source-Code" title="Working With Source Code">
+<link rel="prev" href="Working-With-Source-Code.html#Working-With-Source-Code" title="Working With Source Code">
+<link rel="next" href="Editing-source-code.html#Editing-source-code" title="Editing source code">
+<link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
+<!--
+This manual is for Org version 8.0.6 (release_8.0.6).
+
+Copyright (C) 2004--2013 Free Software Foundation, Inc.
+
+     Permission is granted to copy, distribute and/or modify this
+     document under the terms of the GNU Free Documentation License,
+     Version 1.3 or any later version published by the Free Software
+     Foundation; with no Invariant Sections, with the Front-Cover texts
+     being ``A GNU Manual,'' and with the Back-Cover Texts as in (a)
+     below.  A copy of the license is included in the section entitled
+     ``GNU Free Documentation License.''
+
+     (a) The FSF's Back-Cover Text is: ``You have the freedom to copy
+     and modify this GNU manual.''
+   -->
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" href="http://orgmode.org/org-manual.css" type="text/css" />
+<script type="text/javascript" src="http://orgmode.org/org-keys.js"></script>
+<script type="text/javascript">
+  <!--/*--><![CDATA[/*><!--*/
+   OrgKeyReader.registerHref('h', 'index.html');
+   OrgKeyReader.registerHref('t', 'index.html');
+  /*]]>*/-->
+</script>
+
+<style type="text/css"><!--
+  pre.display { font-family:inherit }
+  pre.format  { font-family:inherit }
+  pre.smalldisplay { font-family:inherit; font-size:smaller }
+  pre.smallformat  { font-family:inherit; font-size:smaller }
+  pre.smallexample { font-size:smaller }
+  pre.smalllisp    { font-size:smaller }
+  span.sc    { font-variant:small-caps }
+  span.roman { font-family:serif; font-weight:normal; } 
+  span.sansserif { font-family:sans-serif; font-weight:normal; } 
+--></style>
+</head>
+<body onload="OrgKeyReader.init();">
+<div id="table-of-contents">
+<p>This is the official manual for the latest <a href="http://orgmode.org">Org-mode</a> release.</p>
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a name="toc_Top" href="index.html#Top">Org Mode Manual</a>
+<li><a name="toc_Introduction" href="Introduction.html#Introduction">1 Introduction</a>
+<li><a name="toc_Document-Structure" href="Document-Structure.html#Document-Structure">2 Document Structure</a>
+<li><a name="toc_Tables" href="Tables.html#Tables">3 Tables</a>
+<li><a name="toc_Hyperlinks" href="Hyperlinks.html#Hyperlinks">4 Hyperlinks</a>
+<li><a name="toc_TODO-Items" href="TODO-Items.html#TODO-Items">5 TODO Items</a>
+<li><a name="toc_Tags" href="Tags.html#Tags">6 Tags</a>
+<li><a name="toc_Properties-and-Columns" href="Properties-and-Columns.html#Properties-and-Columns">7 Properties and Columns</a>
+<li><a name="toc_Dates-and-Times" href="Dates-and-Times.html#Dates-and-Times">8 Dates and Times</a>
+<li><a name="toc_Capture" href="Capture-_002d-Refile-_002d-Archive.html#Capture-_002d-Refile-_002d-Archive">9 Capture-Refile-Archive</a>
+<li><a name="toc_Agenda-Views" href="Agenda-Views.html#Agenda-Views">10 Agenda Views</a>
+<li><a name="toc_Markup" href="Markup.html#Markup">11 Markup</a>
+<li><a name="toc_Exporting" href="Exporting.html#Exporting">12 Exporting</a>
+<li><a name="toc_Publishing" href="Publishing.html#Publishing">13 Publishing</a>
+<li><a name="toc_Working-With-Source-Code" href="Working-With-Source-Code.html#Working-With-Source-Code">14 Source Code</a>
+<li><a name="toc_Miscellaneous" href="Miscellaneous.html#Miscellaneous">15 Miscellaneous</a>
+<li><a name="toc_Hacking" href="Hacking.html#Hacking">A Hacking</a>
+<li><a name="toc_MobileOrg" href="MobileOrg.html#MobileOrg">B MobileOrg</a>
+<li><a name="toc_History-and-Acknowledgments" href="History-and-Acknowledgments.html#History-and-Acknowledgments">C History and Thanks</a>
+<li><a name="toc_Main-Index" href="Main-Index.html#Main-Index">Main Index</a>
+<li><a name="toc_Key-Index" href="Key-Index.html#Key-Index">Key Index</a>
+<li><a name="toc_Variable-Index" href="Variable-Index.html#Variable-Index">Variable Index</a>
+</li></ul>
+</div>
+</div>
+</div>
+
+<div class="node">
+<a name="Structure-of-code-blocks"></a>
+<p>
+Next:&nbsp;<a rel="next" accesskey="n" href="Editing-source-code.html#Editing-source-code">Editing source code</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Working-With-Source-Code.html#Working-With-Source-Code">Working With Source Code</a>,
+Up:&nbsp;<a rel="up" accesskey="u" href="Working-With-Source-Code.html#Working-With-Source-Code">Working With Source Code</a>
+<hr>
+</div>
+
+<h3 class="section">14.1 Structure of code blocks</h3>
+
+<p><a name="index-code-block_002c-structure-1882"></a><a name="index-source-code_002c-block-structure-1883"></a><a name="index-g_t_0023_002bNAME-1884"></a><a name="index-g_t_0023_002bBEGIN_005fSRC-1885"></a>
+Live code blocks can be specified with a &lsquo;<samp><span class="samp">src</span></samp>&rsquo; block or
+inline.<a rel="footnote" href="#fn-1" name="fnd-1"><sup>1</sup></a>  The structure of a &lsquo;<samp><span class="samp">src</span></samp>&rsquo; block is
+
+<pre class="example">     #+NAME: &lt;name&gt;
+     #+BEGIN_SRC &lt;language&gt; &lt;switches&gt; &lt;header arguments&gt;
+       &lt;body&gt;
+     #+END_SRC
+</pre>
+   <p>The <code>#+NAME:</code> line is optional, and can be used to name the code
+block.  Live code blocks require that a language be specified on the
+<code>#+BEGIN_SRC</code> line.  Switches and header arguments are optional. 
+<a name="index-source-code_002c-inline-1886"></a>
+Live code blocks can also be specified inline using
+
+<pre class="example">     src_&lt;language&gt;{&lt;body&gt;}
+</pre>
+   <p>or
+
+<pre class="example">     src_&lt;language&gt;[&lt;header arguments&gt;]{&lt;body&gt;}
+</pre>
+     <dl>
+<dt><code>&lt;#+NAME: name&gt;</code><dd>This line associates a name with the code block.  This is similar to the
+<code>#+NAME: Name</code> lines that can be used to name tables in Org mode
+files.  Referencing the name of a code block makes it possible to evaluate
+the block from other places in the file, from other files, or from Org mode
+table formulas (see <a href="The-spreadsheet.html#The-spreadsheet">The spreadsheet</a>).  Names are assumed to be unique
+and the behavior of Org mode when two or more blocks share the same name is
+undefined. 
+<a name="index-g_t_0023_002bNAME-1887"></a><br><dt><code>&lt;language&gt;</code><dd>The language of the code in the block (see <a href="Languages.html#Languages">Languages</a>). 
+<a name="index-source-code_002c-language-1888"></a><br><dt><code>&lt;switches&gt;</code><dd>Optional switches control code block export (see the discussion of switches in
+<a href="Literal-examples.html#Literal-examples">Literal examples</a>)
+<a name="index-source-code_002c-switches-1889"></a><br><dt><code>&lt;header arguments&gt;</code><dd>Optional header arguments control many aspects of evaluation, export and
+tangling of code blocks (see <a href="Header-arguments.html#Header-arguments">Header arguments</a>). 
+Header arguments can also be set on a per-buffer or per-subtree
+basis using properties. 
+<br><dt><code>source code, header arguments</code><br><dt><code>&lt;body&gt;</code><dd>Source code in the specified language. 
+</dl>
+
+<!-- node-name,  next,  previous,  up -->
+<!-- Editing source code, Exporting code blocks, Structure of code blocks, Working With Source Code -->
+   <div class="footnote">
+<hr>
+<h4>Footnotes</h4><p class="footnote"><small>[<a name="fn-1" href="#fnd-1">1</a>]</small> Note that &lsquo;<samp><span class="samp">src</span></samp>&rsquo; blocks may be inserted using Org mode's
+<a href="Easy-Templates.html#Easy-Templates">Easy Templates</a> system</p>
+
+   <hr></div>
+
+   </body></html>
+
